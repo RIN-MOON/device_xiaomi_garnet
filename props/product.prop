@@ -15,3 +15,6 @@ bluetooth.profile.pbap.server.enabled=true
 
 # Animation override
 persist.sys.activity_anim_perf_override=true
+
+# maintainer
+ro.lunaris.maintainer=ZeroTwo
