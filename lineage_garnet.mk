@@ -9,11 +9,23 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 TARGET_SUPPORTS_OMX_SERVICE := false
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# Flgs
+TARGET_DISABLE_EPPE := true
+TARGET_INCLUDES_LOS_PREBUILTS := true
+
+# AXION
+AXION_MAINTAINER := ZeroTwo
+AXION_PROCESSOR := Snapdragon®_7s_Gen_2
+AXION_CAMERA_REAR_INFO := 200/64,8,2
+AXION_CAMERA_FRONT_INFO := 16
+
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 TARGET_HAS_UDFPS := true
 TARGET_DISABLE_EPPE := true
+TARGET_SUPPORTED_REFRESH_RATES := 60,90,120
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Inherit from garnet device
 $(call inherit-product, device/xiaomi/garnet/device.mk)
